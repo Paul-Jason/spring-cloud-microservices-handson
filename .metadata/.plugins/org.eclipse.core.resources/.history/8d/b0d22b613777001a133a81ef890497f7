@@ -1,0 +1,28 @@
+package com.paulorg.photoapp.api.users.service;
+
+import java.util.UUID;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.paulorg.photoapp.api.users.data.UserEntity;
+import com.paulorg.photoapp.api.users.data.UsersRepository;
+import com.paulorg.photoapp.api.users.shared.UserDTO;
+
+@Service 
+public class UsersServiceImpl implements UsersService{
+
+	@Autowired
+	UsersRepository userRepository;
+	
+	@Override
+	public UserDTO createUser(UserDTO userDetails) {
+		userDetails.setUserId(UUID.randomUUID().toString());
+		ModelMapper modelMapper = new ModelMapper();
+		UserEntity userEntity = modelMapper.map(userDetails, UserEntity.class);
+		userRepository.save(userEntity);
+		return null;
+	}
+
+}

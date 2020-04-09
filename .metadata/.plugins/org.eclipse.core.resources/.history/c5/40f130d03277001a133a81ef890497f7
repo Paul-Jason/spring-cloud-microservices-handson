@@ -1,0 +1,11 @@
+package com.paulorg.photoapp.api.users.service;
+
+public class UsersServiceImpl implements UsersService{
+
+	@Override
+	public UserDTO createUser(UserDTO userDetails) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

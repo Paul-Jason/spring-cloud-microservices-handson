@@ -1,0 +1,10 @@
+package com.paulorg.services;
+
+import com.paulorg.ui.model.request.UserDetailsRequestModel;
+import com.paulorg.ui.model.response.UserTO;
+
+public interface UserInterface {
+	
+	public UserTO createUser(UserDetailsRequestModel userDetails);
+
+}

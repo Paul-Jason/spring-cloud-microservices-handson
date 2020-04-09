@@ -1,0 +1,7 @@
+package com.paulorg.photoapp.api.users.data;
+
+import java.io.Serializable;
+
+public class UserEntity implements Serializable {
+
+}

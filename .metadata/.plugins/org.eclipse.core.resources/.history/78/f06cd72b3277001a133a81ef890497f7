@@ -1,0 +1,7 @@
+package com.paulorg.photoapp.api.users.service;
+
+public interface UsersService {
+	
+	public UserDTO createUser(UserDTO userDetails);
+
+}

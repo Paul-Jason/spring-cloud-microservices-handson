@@ -1,0 +1,5 @@
+package com.paulorg.photoapp.api.users.ui.model;
+
+public class CreateUserRequestModel {
+
+}

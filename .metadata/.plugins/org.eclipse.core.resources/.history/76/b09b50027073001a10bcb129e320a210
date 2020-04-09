@@ -1,0 +1,12 @@
+package com.paulorg.utils;
+
+import java.util.UUID;
+
+public class Utils {
+	
+	public String generateUserId() {
+		String userId = UUID.randomUUID().toString();
+		return userId;
+	}
+
+}

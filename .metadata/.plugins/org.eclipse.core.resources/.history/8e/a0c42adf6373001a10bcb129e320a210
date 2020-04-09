@@ -1,0 +1,5 @@
+package com.paulorg.ui.model.response;
+
+public class ErrorMessage {
+
+}

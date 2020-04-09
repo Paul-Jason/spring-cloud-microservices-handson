@@ -1,0 +1,5 @@
+package com.paulorg.exceptions;
+
+public class AppExceptionHandler {
+
+}

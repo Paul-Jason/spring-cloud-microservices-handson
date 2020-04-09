@@ -1,0 +1,5 @@
+package com.paulorg.photoapp.api.accountmanagement.ui.controller;
+
+public class AccountManagementController {
+
+}

@@ -1,0 +1,18 @@
+package com.paulorg.services.implementation;
+
+import com.paulorg.services.UserServiceInterface;
+import com.paulorg.ui.model.request.UserDetailsRequestModel;
+import com.paulorg.ui.model.response.UserTO;
+
+public class UserServiceImpl implements UserServiceInterface{
+
+	@Override
+	public UserTO createUser(UserDetailsRequestModel userDetails) {
+		UserTO userTO = new UserTO();
+		userTO.setEmail(userDetails.getEmail());
+		userTO.setFirstName(userDetails.getFirstName());
+		userTO.setSecondName(userDetails.getSecondName());
+		return userTO;
+	}
+
+}

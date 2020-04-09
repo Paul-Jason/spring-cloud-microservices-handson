@@ -1,0 +1,29 @@
+package com.paulorg.services.implementation;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.UUID;
+
+import com.paulorg.services.UserServiceInterface;
+import com.paulorg.ui.model.request.UserDetailsRequestModel;
+import com.paulorg.ui.model.response.UserTO;
+
+public class UserServiceImpl implements UserServiceInterface{
+	
+	Map<String, UserTO> users;
+
+	@Override
+	public UserTO createUser(UserDetailsRequestModel userDetails) {
+		UserTO userTO = new UserTO();
+		userTO.setEmail(userDetails.getEmail());
+		userTO.setFirstName(userDetails.getFirstName());
+		userTO.setSecondName(userDetails.getSecondName());
+		String userId = UUID.randomUUID().toString();
+		userTO.setUserId(userId);
+		
+		if(users == null) users = new HashMap<String, UserTO>();
+			users.put(userId, userTO);
+		return userTO;
+	}
+
+}

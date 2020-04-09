@@ -1,0 +1,9 @@
+package com.paulorg.photoapp.api.users.data;
+
+import java.io.Serializable;
+
+public class UserEntity implements Serializable {
+
+	private static final long serialVersionUID = 6267389738124129609L;
+
+}
